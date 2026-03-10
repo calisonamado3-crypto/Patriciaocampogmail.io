@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Handmade Jewelry Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("https://dynamic.brandcrowd.com/template/preview/design/03435abe-4fc0-4d9d-9666-9b7b4ff87c09?v=4&designTemplateVersion=1&size=design-preview-wide-2x&layout=auto-1-1");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        .container {
+            width: 350px;
+            margin: auto;
+            padding: 25px;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            color: #d63384;
+        }
+
+        .item {
+            margin: 15px 0;
+            font-size: 18px;
+        }
+
+        .price {
+            color: #198754;
+            font-weight: bold;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            background-color: #d63384;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #b0256b;
+        }
+
+        #menuPage {
+            display: none;
+        }
+
+        .welcome {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #555;
+        }
+    </style>
+    <script>
+        function enterShop() {
+            var name = document.getElementById("username").value;
+
+            if(name.trim() === "") {
+                alert("Please enter your name first 💕");
+            } else {             document.getElementById("loginPage").style.display = "none";             document.getElementById("menuPage").style.display = "block";      document.getElementById("displayName").innerText = name;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container" id="loginPage">
+        <h1>Welcome 💎</h1>
+        <p>Enter your name to visit our shop</p>
+        <input type="text" id="username" placeholder="Your Name">
+        <br>
+        <button onclick="enterShop">Enter Shop</button>
+    </div>
+    <div class="container" id="menuPage">
+        <div class="welcome">Hi <span id="displayName"></span>!</div>
+        <h1>✨ Handmade Jewelry ✨</h1>
+
+        <div class="item">
+            💖 Heart/Star Necklace - <span class="price">₱75</span>
+        </div>
+
+        <div class="item">
+            ⭐ Heart/Star Earrings - <span class="price">₱50</span>
+        </div>
+
+        <div class="item">
+            💕 Heart/Star Bracelet - <span class="price">₱60</span>
+        </div>
+
+        <div style="margin-top: 20px; font-size: 14px; color: gray;">
+            Thank you for supporting this booth! 💎
+        </div>
+    </div>
+
+</body>
+</html>
